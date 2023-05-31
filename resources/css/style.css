@@ -1,0 +1,101 @@
+.product_cart_notification_wrapper {
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.product_cart_notification_wrapper.top-right{
+    top: 50px;
+}
+
+.product_cart_notification_wrapper.bottom-right{
+    bottom: 50px;
+}
+
+.product_cart_notification{
+    padding: 15px;
+}
+
+.product_cart_notification.style_modern{
+    background-size: cover;
+    background-position: center center;
+}
+
+.product_cart_notification_wrapper.open {
+    transform: translateX(-15px);
+}
+
+.product_cart_notification header {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.product_cart_notification header .title {
+    color: #333333;
+    font-weight: bold;
+}
+
+.product_cart_notification header .close {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.product_cart_notification .middle{
+    margin-bottom: 15px;
+}
+
+.product_cart_notification.style_default .middle{
+    display: flex;
+    gap: 15px;
+}
+
+.product_cart_notification.style_default .product_cart_notification__image {
+    flex: 1 25%;
+}
+
+.product_cart_notification.style_default .product_cart_notification__content {
+    flex: 1 75%;
+}
+
+.product_cart_notification .product_cart_notification__content__title {
+    margin-bottom: 5px;
+}
+
+.product_cart_notification .product_cart_notification__content__title a {
+    transition: 300ms;
+    color: #333333;
+    font-weight: bold;
+}
+
+.product_cart_notification .product_cart_notification__content__price {
+    transition: 300ms;
+    color: #6d6d6d;
+    font-size: 14px;
+}
+
+.product_cart_notification .product_cart_notification__content__button {
+    flex: 1 1 auto;
+}
+
+.product_cart_notification .product_cart_notification__content__button a {
+    transition: 300ms;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.product_cart_notification .product_cart_notification__content__button a:hover {
+    opacity: .8;
+}

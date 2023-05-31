@@ -1,0 +1,22 @@
+{
+    "name": "devwael/cart-notifications-wc",
+    "description": "WordPress plugin that display notification when the customer add product to woocommerce cart",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0+",
+    "autoload": {
+        "psr-4": {
+            "Devwael\\CartNotificationsWc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "devwael",
+            "email": "dev.ahmedwael@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*"
+    }
+}
