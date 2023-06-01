@@ -47,7 +47,12 @@ if ( ! class_exists( Main::class ) && is_readable( $autoLoad ) ) {
 /**
  * Create instance from the main plugin class
  */
-class_exists( Main::class ) && Main::instance();
+/**
+ * Check if WooCommerce is activated to activate the plugin logic.
+ */
+if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+	class_exists( Main::class ) && Main::instance();
+}
 
 \register_activation_hook( __FILE__, static function () {
 	\update_option( 'cart_notifications_wc_options', [
